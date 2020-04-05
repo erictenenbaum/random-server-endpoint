@@ -1,10 +1,12 @@
 # random-server-endpoint
 
-To run, start up the node server by running "node index.js" inside the node-server directory.
-Then cd into the random-wait-endpoint directory and run "./mvnw spring-boot:run"
+To run:
+cd into the "node-server" directory and run "npm install"
+then start up the node server by running "node index.js" 
+Then in another terminal cd into the random-wait-endpoint directory and run "./mvnw spring-boot:run"
 
 Some issues I ran into that I was trying to fix/debug:
-When running within "random-wait-endpoint" (pointing to the JobIdRouter and Handler inside the project) and when trying to hit the same route (different port - 8080) in "random-wait-endpoint-server" I would get connection timeout errors of serveral varieties: 
+When running within "random-wait-endpoint" (pointing to the JobIdRouter and JobIdHandler inside the project) and when trying to hit the same route (different port - 8080) in "random-wait-endpoint-server" I would get connection timeout errors of serveral varieties: 
 
 PrematureCloseException: Connection has been closed BEFORE response, while sending request body
 io.netty.channel.AbstractChannel$AnnotatedConnectException: Operation timed out: localhost/127.0.0.1:8080
